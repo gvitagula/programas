@@ -352,6 +352,36 @@
     .footer a:hover {
       color: #ff6f61;
     }
+    .megaphone-message {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ff6f61;
+      color: #ffffff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      z-index: 10000;
+      text-align: center;
+      font-size: 1em;
+      width: 90%;
+      max-width: 300px;
+    }
+    .megaphone-message button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #ffffff;
+      color: #ff6f61;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9em;
+      min-width: 44px;
+      min-height: 44px;
+      touch-action: manipulation;
+    }
     @media (min-width: 768px) {
       .container {
         max-width: 1600px;
@@ -566,79 +596,61 @@
     </div>
     <div class="tab-content">
       <h3>Programas Essenciais</h3>
-      <p class="text-center text-lg opacity-80 mb-8">Explore ferramentas modernas para produtividade, gerenciamento de arquivos e edição com IA</p>
+      <p class="text-center text-lg opacity-80 mb-8">Explore ferramentas gratuitas para produtividade, gerenciamento de arquivos e edição com IA</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Office Online -->
+        <!-- LibreOffice -->
         <div class="card rounded-lg p-6">
-          <h4 class="text-xl font-semibold glow">Office Online</h4>
-          <p class="mt-2 opacity-80">Crie, edite e colabore em documentos, planilhas e apresentações em tempo real, com armazenamento na nuvem.</p>
-          <a href="https://www.microsoft.com/pt-br/microsoft-365/free-office-online" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Acessar</a>
-        </div>
-        <!-- UPDF -->
-        <div class="card rounded-lg p-6">
-          <h4 class="text-xl font-semibold glow">UPDF</h4>
-          <p class="mt-2 opacity-80">Edite, anote e gerencie arquivos PDF com uma interface intuitiva e moderna, disponível em várias plataformas.</p>
-          <a href="https://updf.com/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Acessar</a>
-        </div>
-        <!-- WinZip -->
-        <div class="card rounded-lg p-6">
-          <h4 class="text-xl font-semibold glow">WinZip</h4>
-          <p class="mt-2 opacity-80">Compacte e descompacte arquivos ZIP, com suporte a criptografia e integração com serviços de nuvem.</p>
-          <a href="https://www.winzip.com/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Acessar</a>
-        </div>
-        <!-- WinRAR -->
-        <div class="card rounded-lg p-6">
-          <h4 class="text-xl font-semibold glow">WinRAR</h4>
-          <p class="mt-2 opacity-80">Ferramenta clássica para compactar e descompactar arquivos RAR, ZIP e outros formatos, com alta eficiência.</p>
-          <a href="https://www.win-rar.com/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Acessar</a>
+          <h4 class="text-xl font-semibold glow">LibreOffice</h4>
+          <p class="mt-2 opacity-80">Suite de escritório gratuita para criar e editar documentos, planilhas e apresentações, compatível com Microsoft Office.</p>
+          <a href="https://www.libreoffice.org/download/download/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Baixar</a>
         </div>
         <!-- 7-Zip -->
         <div class="card rounded-lg p-6">
           <h4 class="text-xl font-semibold glow">7-Zip</h4>
           <p class="mt-2 opacity-80">Software gratuito e de código aberto para compactar e descompactar arquivos em vários formatos, como 7Z e ZIP.</p>
-          <a href="https://www.7-zip.org/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Acessar</a>
+          <a href="https://www.7-zip.org/download.html" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Baixar</a>
         </div>
         <!-- Notion -->
         <div class="card rounded-lg p-6">
           <h4 class="text-xl font-semibold glow">Notion</h4>
-          <p class="mt-2 opacity-80">Organize tarefas, anotações e projetos em um espaço de trabalho tudo-em-um, com colaboração em equipe e integração de IA.</p>
-          <a href="https://www.notion.so/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Acessar</a>
+          <p class="mt-2 opacity-80">Organize tarefas, anotações e projetos em um espaço tudo-em-um, com plano gratuito para colaboração e integração de IA.</p>
+          <a href="https://www.notion.so/desktop" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Baixar</a>
         </div>
         <!-- Trello -->
         <div class="card rounded-lg p-6">
           <h4 class="text-xl font-semibold glow">Trello</h4>
-          <p class="mt-2 opacity-80">Gerencie projetos com quadros visuais, listas e cartões, ideal para equipes e fluxos de trabalho ágeis.</p>
-          <a href="https://trello.com/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Acessar</a>
+          <p class="mt-2 opacity-80">Gerencie projetos com quadros visuais e cartões, ideal para equipes, com um plano gratuito robusto.</p>
+          <a href="https://trello.com/platforms" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Baixar</a>
         </div>
-        <!-- Photoroom -->
+        <!-- GIMP -->
         <div class="card rounded-lg p-6">
-          <h4 class="text-xl font-semibold glow">Photoroom</h4>
-          <p class="mt-2 opacity-80">Remova fundos de imagens instantaneamente com IA, personalize com novos cenários e edite fotos com facilidade.</p>
-          <a href="https://www.photoroom.com/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Acessar</a>
-        </div>
-        <!-- Pixelcut -->
-        <div class="card rounded-lg p-6">
-          <h4 class="text-xl font-semibold glow">Pixelcut</h4>
-          <p class="mt-2 opacity-80">Edite imagens com IA, removendo fundos e adicionando cenários fotorrealistas, ideal para produtos e redes sociais.</p>
-          <a href="https://www.pixelcut.ai/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Acessar</a>
+          <h4 class="text-xl font-semibold glow">GIMP</h4>
+          <p class="mt-2 opacity-80">Editor de imagens gratuito e poderoso para edição de fotos, design gráfico e remoção de fundos, rival do Photoshop.</p>
+          <a href="https://www.gimp.org/downloads/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Baixar</a>
         </div>
         <!-- Canva -->
         <div class="card rounded-lg p-6">
           <h4 class="text-xl font-semibold glow">Canva</h4>
-          <p class="mt-2 opacity-80">Crie designs, remova fundos de imagens e edite vídeos com ferramentas de IA intuitivas e templates prontos.</p>
-          <a href="https://www.canva.com/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Acessar</a>
+          <p class="mt-2 opacity-80">Crie designs e edite imagens/vídeos com IA, usando templates gratuitos e ferramentas de remoção de fundo.</p>
+          <a href="https://www.canva.com/download/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Baixar</a>
         </div>
         <!-- CapCut -->
         <div class="card rounded-lg p-6">
           <h4 class="text-xl font-semibold glow">CapCut</h4>
-          <p class="mt-2 opacity-80">Edite vídeos e imagens com IA, incluindo remoção de fundo, cortes automáticos e efeitos avançados, grátis.</p>
-          <a href="https://www.capcut.com/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Acessar</a>
+          <p class="mt-2 opacity-80">Edite vídeos e imagens com IA, incluindo remoção de fundo e cortes automáticos, totalmente gratuito.</p>
+          <a href="https://www.capcut.com/tools/desktop-video-editor" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Baixar</a>
         </div>
-        <!-- Vidnoz -->
+        <!-- DaVinci Resolve -->
         <div class="card rounded-lg p-6">
-          <h4 class="text-xl font-semibold glow">Vidnoz</h4>
-          <p class="mt-2 opacity-80">Remova fundos de vídeos e imagens com IA, crie avatares falantes e edite com ferramentas de alta qualidade.</p>
-          <a href="https://www.vidnoz.com/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Acessar</a>
+          <h4 class="text-xl font-semibold glow">DaVinci Resolve</h4>
+          <p class="mt-2 opacity-80">Editor de vídeo profissional gratuito com ferramentas de corte, correção de cores e efeitos avançados.</p>
+          <a href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Baixar</a>
+        </div>
+        <!-- Photopea -->
+        <div class="card rounded-lg p-6">
+          <h4 class="text-xl font-semibold glow">Photopea</h4>
+          <p class="mt-2 opacity-80">Editor de imagens online gratuito, semelhante ao Photoshop, com suporte a PSD e remoção de fundo.</p>
+          <a href="https://www.photopea.com/" target="_blank" class="inline-block mt-4 px-4 py-2 bg-[#ff6f61] text-white rounded hover:bg-white hover:text-[#ff6f61] transition">Acessar</a>
         </div>
       </div>
     </div>
